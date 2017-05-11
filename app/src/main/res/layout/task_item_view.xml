@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/task_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信运营公众号"
+            android:textSize="17sp"/>
+        <TextView
+            android:id="@+id/task_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4000"
+            android:layout_toRightOf="@id/task_item_title"
+            android:layout_alignBottom="@id/task_item_title"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/task_item_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="碑林区"
+            android:layout_below="@id/task_item_title"
+            android:layout_marginTop="4dp" />
+        <TextView
+            android:id="@+id/task_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1小时前"
+            android:layout_below="@id/task_item_location"
+            android:layout_marginTop="4dp"
+            android:textSize="10dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
