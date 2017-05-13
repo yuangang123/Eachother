@@ -3,15 +3,21 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
+    <ProgressBar
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"/>
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/register_back_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
         <Button
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/register_back_button"
             android:background="@drawable/back"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"/>
@@ -26,119 +32,74 @@
 
     </LinearLayout>
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/register_circle_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/register_back_button"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/head"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:id="@+id/register_info_linearLayout"
-        android:layout_centerInParent="true">
+        android:layout_below="@+id/register_circle_view"
+        android:layout_alignParentStart="true">
 
-        <LinearLayout
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:gravity="center"
+            android:id="@+id/register_user_name"
+            android:hint="用户名"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="手机：" />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/register_phone_number"/>
-        </LinearLayout>
-        <LinearLayout
+            android:layout_marginRight="50dp" />
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:gravity="center"
+            android:id="@+id/register_phone_number"
+            android:hint="手机号码"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="密码：" />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/register_password"/>
-        </LinearLayout>
-        <LinearLayout
+            android:layout_marginRight="50dp" />
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:gravity="center"
+            android:id="@+id/register_password"
+            android:hint="密码"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="邮箱：" />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/register_mail"/>
-        </LinearLayout>
-        <LinearLayout
+            android:layout_marginRight="50dp" />
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:gravity="center"
+            android:id="@+id/register_mail"
+            android:hint="邮箱"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="身份证：" />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/register_id_card"/>
-        </LinearLayout>
-        <LinearLayout
+            android:layout_marginRight="50dp" />
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:gravity="center"
+            android:id="@+id/register_id_card"
+            android:hint="身份证号码"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="学校：" />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/register_school"/>
-        </LinearLayout>
-        <LinearLayout
+            android:layout_marginRight="50dp" />
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:gravity="center"
+            android:id="@+id/register_school"
+            android:hint="学校名称"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="学号：" />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/register_studentId"/>
-        </LinearLayout>
+            android:layout_marginRight="50dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/register_studentId"
+            android:hint="您的学号"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" />
     </LinearLayout>
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/register_circle_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_above="@id/register_info_linearLayout"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/head"
-        android:layout_marginBottom="5dp"/>
 
     <Button
         android:id="@+id/register_conmmit_button"

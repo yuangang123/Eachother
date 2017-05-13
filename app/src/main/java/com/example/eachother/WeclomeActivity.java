@@ -27,6 +27,16 @@ public class WeclomeActivity extends AppCompatActivity {
                 }
             }, 2000);
         }
+        else {
+            new Handler().postDelayed(new Runnable(){
+                @Override
+                public void run() {
+                    Intent mainIntent = new Intent(WeclomeActivity.this,LoginAndRegister.class);
+                    startActivity(mainIntent);
+                    finish();
+                }
+            }, 2000);
+        }
 
     }
 
