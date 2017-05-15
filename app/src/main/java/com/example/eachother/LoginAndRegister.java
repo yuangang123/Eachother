@@ -105,6 +105,49 @@ public class LoginAndRegister extends BaseActivity implements View.OnClickListen
             loginAccount.setText(loginAccountPres);
             String loginPasswordPres = prefs.getString("loginPassword",null);
             loginPassword.setText(loginPasswordPres);
+            if (RegisterActivity.isMobileNumberValid(loginAccount.getText().toString().trim())){
+                AVQuery<AVObject> avQuery = new AVQuery<>("_User");
+                avQuery.whereEqualTo("mobilePhoneNumber",loginAccount.getText().toString().trim());
+                Log.d("focus", "onFocusChange: "+"是电话");
+                avQuery.findInBackground(new FindCallback<AVObject>() {
+                    @Override
+                    public void done(List<AVObject> list, AVException e) {
+                        if (e==null){
+                            Log.d("focus", "done: "+"list判断");
+                            if (list!=null){
+                                /**
+                                 * glide图片加载
+                                 */
+                                Log.d("focus", "done: "+"glide图片加载");
+                                Glide.with(LoginAndRegister.this).load(list.get(0).getAVFile("image").getUrl()).into(circleImageView);
+                            }
+                        }else {
+                            Log.d("focus", "done: "+"fuck");
+                            Log.d("focus", "done: "+e.getLocalizedMessage());
+                        }
+                    }
+                });
+            }else {
+                AVQuery<AVObject> avQuery = new AVQuery<>("User");
+                avQuery.whereEqualTo("username",loginAccount.getText().toString().trim());
+                avQuery.findInBackground(new FindCallback<AVObject>() {
+                    @Override
+                    public void done(List<AVObject> list, AVException e) {
+                        if (e==null){
+                            if (list!=null){
+                                /**
+                                 * 同样glide图片加载
+                                 */
+                                Log.d("focus", "done: "+"glide图片加载");
+                                Glide.with(LoginAndRegister.this).load(list.get(0).getAVFile("image").getUrl()).into(circleImageView);
+                            }
+                        }else {
+                            Log.d("loginfindheadimh", "done: "+e.getLocalizedMessage());
+                        }
+                    }
+                });
+
+            }
             if (isForce==false){
                 attemLogin();
             }

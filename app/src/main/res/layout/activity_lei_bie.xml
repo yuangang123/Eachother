@@ -6,25 +6,31 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#ffda44">
-        <Button
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:id="@+id/push_back_button"
-            android:background="@drawable/back"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"/>
+        android:background="#f3f5f9">
+        <!--<LinearLayout-->
+            <!--android:id="@+id/push_back_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true">-->
+            <!--<Button-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:background="@drawable/back" />-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="发布"/>-->
+        <!--</LinearLayout>-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:text="类别"
             android:gravity="center"
-            android:textSize="18sp"
-            android:textColor="#FFFFFF"/>
+            android:textSize="18sp" />
     </RelativeLayout>
     <ListView
-        android:layout_width="368dp"
-        android:layout_height="551dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:id="@+id/push_leiBie_listView"></ListView>
 </LinearLayout>
