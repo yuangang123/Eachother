@@ -5,20 +5,20 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#ffda44">
+        android:background="#f3f5f9">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="消息"
             android:layout_centerInParent="true"
-            android:textSize="18sp"
-            android:textColor="#ffffff"/>
+            android:textSize="18sp" />
     </RelativeLayout>
+
     <ListView
+        android:id="@+id/fragment_message_list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/fragment_message_list_view">
+        android:layout_height="match_parent">
 
     </ListView>
 

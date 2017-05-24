@@ -48,7 +48,7 @@
             android:launchMode="singleTask" />
         <activity android:name=".Message_chat_activity" />
         <activity android:name=".LeiBie" />
-        <activity android:name=".Tash_full_infomation" />
+        <activity android:name=".Task_full_infomation" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

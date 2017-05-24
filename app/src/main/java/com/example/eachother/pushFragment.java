@@ -162,6 +162,7 @@ public class pushFragment extends Fragment {
                 task.put("taskPushLocation",locationtext.getText().toString());
                 task.put("taskTitle",title.getText().toString());
                 task.put("UserHeadImag",AVUser.getCurrentUser().getAVFile("image"));
+                task.put("username",AVUser.getCurrentUser().getString("username"));
                 task.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(AVException e) {

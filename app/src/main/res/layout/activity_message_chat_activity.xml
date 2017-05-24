@@ -6,22 +6,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#ffda44">
-        <Button
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:id="@+id/message_chat_back_button"
-            android:background="@drawable/back"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"/>
+        android:background="#f3f5f9">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:text="高峰如云"
             android:gravity="center"
-            android:textSize="18sp"
-            android:textColor="#FFFFFF"/>
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
@@ -34,14 +27,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="在此输入..."
-            android:id="@+id/message_chat_input_editText"/>
+            android:id="@+id/message_chat_input_editText"
+            android:background="@drawable/input"
+            android:layout_gravity="center"/>
         <Button
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="发送"

@@ -12,13 +12,15 @@ public class TaskItem {
     private String pushLoation;
     private String time;
     private String circleImageViewURL;
+    private String taskid;
 
-    public TaskItem(String title, String price, String pushLoation, String time,String circleImageViewURL) {
+    public TaskItem(String title, String price, String pushLoation, String time,String circleImageViewURL,String taskId) {
         this.title = title;
         this.price = price;
         this.pushLoation = pushLoation;
         this.time = time;
         this.circleImageViewURL=circleImageViewURL;
+        this.taskid = taskId;
     }
 
     public String getTitle() {
@@ -41,4 +43,7 @@ public class TaskItem {
         return circleImageViewURL;
     }
 
+    public String getTaskid() {
+        return taskid;
+    }
 }

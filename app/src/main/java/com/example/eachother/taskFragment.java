@@ -23,6 +23,7 @@ import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.FindCallback;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import info.TaskArrayAdapter;
@@ -67,8 +68,13 @@ public class taskFragment extends Fragment {
     }
 
     private void initTaskItem(){
-        final AVQuery<AVObject> avQuery = new AVQuery<>("Task");
-        avQuery.whereEqualTo("isEnd",false);
+        final AVQuery<AVObject> avQueryIsEnd = new AVQuery<>("Task");
+        avQueryIsEnd.whereEqualTo("isEnd",false);
+
+        final AVQuery<AVObject> avQueryorder = new AVQuery<>("Task");
+        avQueryorder.orderByAscending("createdAt");
+
+        AVQuery<AVObject> avQuery= AVQuery.and(Arrays.asList(avQueryIsEnd,avQueryorder));
         avQuery.findInBackground(new FindCallback<AVObject>() {
             @Override
             public void done(List<AVObject> list, AVException e) {
@@ -81,9 +87,7 @@ public class taskFragment extends Fragment {
                         String pushTime = avObject.getDate("updatedAt").toString();
                         String UserHeadImag = avObject.getAVFile("UserHeadImag").getUrl();
 
-                        Log.d("task", "done: "+taskTitle+price+location+pushTime);
-
-                        TaskItem taskItem = new TaskItem(taskTitle,price,location,pushTime,UserHeadImag);
+                        TaskItem taskItem = new TaskItem(taskTitle,price,location,pushTime,UserHeadImag,avObject.getObjectId());
                         taskItemList.add(taskItem);
                         arrayAdapter.notifyDataSetChanged();
                         progressBar.setVisibility(View.INVISIBLE);
