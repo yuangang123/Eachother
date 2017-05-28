@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#f3f5f9">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帮助与反馈"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/feedback_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_above="@+id/feedback_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="33dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/feedback_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/feedback_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="非常抱歉我们的软件为你带来使用问题，有任何问题可以骚扰我们的热线客服" />
+
+        <TextView
+            android:id="@+id/feedback_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="18173366517"
+            android:layout_below="@+id/feedback_email"
+            android:layout_centerHorizontal="true"
+            android:textColor="#82e8ff"/>
+
+        <TextView
+            android:id="@+id/feedback_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="975131172@qq.com"
+            android:textColor="#82e8ff"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -28,6 +28,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -277,7 +278,7 @@ public class Task_full_infomation extends BaseActivity implements View.OnClickLi
 
                         AVObject dianzan = new AVObject("Dianzan");
                         dianzan.put("taskId",taskIdthis);
-                        dianzan.put("DianzanUser",AVUser.getCurrentUser().getString("objectId"));
+                        dianzan.put("DianzanUser",AVUser.getCurrentUser().getObjectId());
                         dianzan.saveInBackground(new SaveCallback() {
                             @Override
                             public void done(AVException e) {
@@ -312,6 +313,8 @@ public class Task_full_infomation extends BaseActivity implements View.OnClickLi
     public void iwantitfun(){
         AVObject task = AVObject.createWithoutData("Task",taskIdthis);
         task.put("isReceived",true);
+        task.put("receivedUser",AVUser.getCurrentUser().getObjectId());
+        task.put("receivedTime",new Date(System.currentTimeMillis()));
         task.saveInBackground();
         ReceiveTask.setBackgroundColor(Color.GRAY);
         ReceiveTask.setClickable(false);

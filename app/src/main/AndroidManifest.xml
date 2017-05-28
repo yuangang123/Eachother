@@ -8,16 +8,17 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
 
     <!-- 基础模块 END -->
     <application
@@ -28,10 +29,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        <meta-data android:name="com.amap.api.v2.apikey"
-            android:value="dc85fe178f57cc027754c0f671ec3916"/>
-
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="dc85fe178f57cc027754c0f671ec3916" />
 
         <activity android:name=".WeclomeActivity">
             <intent-filter>
@@ -40,8 +40,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity android:name=".MainActivity" />
         <activity
             android:name=".LoginAndRegister"
@@ -80,9 +78,16 @@
 
         <activity android:name=".PhoneCertificationOfRegister" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".FindBackPasswordActivity"></activity>
-        <service android:name="com.amap.api.location.APSService"></service>
+        <activity android:name=".FindBackPasswordActivity" />
 
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".WePushActivity" />
+        <activity android:name=".MyFinishedTasksActivity" />
+        <activity android:name=".MyDoTaskActivity" />
+        <activity android:name=".MyZanActivity" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".Setting"></activity>
     </application>
 
 </manifest>

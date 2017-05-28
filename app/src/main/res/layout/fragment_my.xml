@@ -8,7 +8,7 @@
         android:layout_height="130dp">
 
         <TextView
-            android:id="@+id/my_name_tet"
+            android:id="@+id/my_name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40sp"
@@ -18,19 +18,23 @@
             android:layout_marginLeft="30sp"/>
 
         <TextView
+            android:id="@+id/earnMoney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/my_name_tet"
-            android:text="在EachOther赚了3888元"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/my_name_text"
+            android:text="在EachOther赚了888元"
             android:layout_marginLeft="30sp"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/my_head_image"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:src="@drawable/login" />
+            android:src="@drawable/login"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="14dp" />
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,7 +59,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我发布的"
+                android:text="我发布的任务"
                 android:layout_marginLeft="40dp"
                 android:layout_alignTop="@+id/imageView" />
             <ImageView
@@ -89,7 +93,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我接受的"
+                android:text="我领取的任务"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="40dp" />
             <ImageView
@@ -123,7 +127,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="已完成的"
+                android:text="交易完成的任务"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="40dp" />
             <ImageView
@@ -156,7 +160,7 @@
             <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="我赞过的"
+            android:text="我赞过的任务"
             android:layout_centerVertical="true"
             android:layout_marginLeft="40dp" />
             <ImageView
