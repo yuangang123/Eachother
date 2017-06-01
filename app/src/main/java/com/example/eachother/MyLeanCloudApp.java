@@ -3,6 +3,7 @@ package com.example.eachother;
 import android.app.Application;
 
 import com.avos.avoscloud.AVOSCloud;
+import com.avos.avoscloud.im.v2.AVIMMessageManager;
 
 /**
  * Created by 袁刚 on 2017/5/11.

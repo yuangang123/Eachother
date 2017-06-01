@@ -308,6 +308,9 @@ public class Task_full_infomation extends BaseActivity implements View.OnClickLi
 
     public void chatfun(){
         Toast.makeText(Task_full_infomation.this,"你将跳转到聊天室，注意隐私防止上当受骗！",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(Task_full_infomation.this,Message_chat_activity.class);
+        intent.putExtra("ChatUserName",username.getText().toString());
+        startActivity(intent);
     }
 
     public void iwantitfun(){
